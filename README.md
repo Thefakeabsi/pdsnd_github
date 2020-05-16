@@ -1,15 +1,22 @@
 ### Date created
-Include the date you created this project and README file.
+Date the Bikeshare Project was created: 5/11/20
+Date the README.md file was created: 5/16/20
 
 ### Project Title
-Replace the Project Title
+Bikeshare Project
 
 ### Description
-Describe what your project is about and what it does
+My project uses data collected from bikeshare systems in Chicago, Washington, and New York City.  
+
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
+README.md
+readme.txt
+
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+For sources and inspiration, check the readme.txt file.
