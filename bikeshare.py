@@ -9,7 +9,7 @@ CITY_DATA = {'chicago': 'chicago.csv',
 
 def print_message(string):  #Delays each print statement by .7 seconds
     print(string)
-    time.sleep(.7)
+    time.sleep(.75)
 
 
 def get_filters():
