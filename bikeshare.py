@@ -105,24 +105,24 @@ def time_stats(df, month, day):
         common_month = df['month'].mode()[0]
         month_list = ['January', 'February', 'March', 'April', 'May', 'June']
         common_month = month_list[common_month - 1]
-        print_message(f"The most common month to travel is {common_month.title()}.")
+        print_message("The most common month to travel is {}.".format(common_month.title()))
     else:
-        print_message(f'The selected data is filtered by {month.title()}.')
+        print_message('The selected data is filtered by {}.'.format(month.title()))
     # Displays the most common day of week
     if day == 'all':
         common_day = df['day_of_week'].mode()[0]
-        print_message(f"The most common day of the week to travel is {common_day}.")
+        print_message("The most common day of the week to travel is {}.".format(common_day))
     else:
-        print_message(f"The selected data is filtered by {day}.")
+        print_message("The selected data is filtered by {}.".format(day))
 
     # Displays the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     common_hour = df['hour'].mode()[0]
     if common_hour > 12:
         common_hour -= 12
-        print_message(f"The most common start hour is {common_hour} o'clock PM.")
+        print_message("The most common start hour is {} o'clock PM.".format(common_hour))
     else:
-        print_message(f"The most common start hour is {common_hour} o'clock AM.")
+        print_message("The most common start hour is {} o'clock AM.".format(common_hour))
     print("\nThis took %s seconds." % (time.time() - start_time))
     print_message('-'*40)
 
@@ -135,16 +135,16 @@ def station_stats(df):
 
     # Displays the most commonly used start station
     common_start = df['Start Station'].mode()[0]
-    print_message(f"The most commonly used start station is {common_start}.")
+    print_message("The most commonly used start station is {}.".format(common_start))
     print(" ")
     # Displays the most commonly used end station
     common_end = df['End Station'].mode()[0]
-    print_message(f"The most commonly used end station is {common_end}.")
+    print_message("The most commonly used end station is {}.".format(common_end))
     print(" ")
     # Displays the most frequent combination of start station and end station trip
     df['trip'] = df['Start Station'].str.cat(df['End Station'], sep=' to ')
     common_trip = df['trip'].mode()[0]
-    print_message(f"The most commonly used trip combination is {common_trip}.")
+    print_message("The most commonly used trip combination is {}.".format(common_trip))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
